@@ -49,29 +49,16 @@ export default function Home() {
           absolute: true,
           scale: true,
           onStart: () => {
-            [
-              "[data-first-part]",
-              "[data-second-part]",
-              "[data-third-part]",
-            ].forEach((e) => {
-              gsap.fromTo(
-                e,
-                {
-                  stroke: "#ffffff",
-                  fill: "#ffffff",
-                  delay: 0.0025,
-                  duration: 0.0025,
-                  ease: "power2.out",
-                },
-                {
-                  stroke: "#0d542b",
-                  fill: "#0d542b",
-                  delay: 0.025,
-                  duration: 0.25,
-                  ease: "power1.in",
-                },
-              );
-            });
+            gsap.to(
+              ["[data-first-part]", "[data-second-part]", "[data-third-part]"],
+              {
+                stroke: "#0d542b",
+                fill: "#0d542b",
+                delay: 0.025,
+                duration: 0.25,
+                ease: "power1.in",
+              },
+            );
           },
           onComplete: () => {
             loader?.remove();

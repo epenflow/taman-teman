@@ -105,8 +105,8 @@ const TMLoader: React.FC<TMLoaderProps> = ({ gTL }) => {
               i % 2 === 0 ? "inset(100% 0% 0% 0%)" : "inset(0% 0% 100% 0%)",
             onStart: () => {
               gsap.to([fPath, sPath, tPath], {
-                fill: "#16a34a",
-                stroke: "#16a34a",
+                fill: "#FFFFFF",
+                stroke: "#FFFFFF",
                 ease: "sine.inOut",
               });
             },

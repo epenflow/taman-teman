@@ -45,6 +45,7 @@ const TMContact: React.FC<TMContactProps> = ({ gTL }) => {
         e.classList.add("overflow-clip");
         e.textContent = "";
         e.appendChild(pTag);
+
         gsap.set(pTag, {
           yPercent: 100,
           display: "block",
@@ -59,7 +60,7 @@ const TMContact: React.FC<TMContactProps> = ({ gTL }) => {
       })
         .to(tmHeading.words, {
           xPercent: 0,
-          duration: 0.25,
+          duration: 0.5,
           ease: "power4.out",
         })
         .to(
@@ -67,7 +68,7 @@ const TMContact: React.FC<TMContactProps> = ({ gTL }) => {
           {
             y: 0,
             autoAlpha: 1,
-            stagger: 0.025,
+            stagger: 0.25,
             ease: "power4.in",
             rotate: 0,
           },
@@ -99,7 +100,7 @@ const TMContact: React.FC<TMContactProps> = ({ gTL }) => {
             </div>
             <h1
               data-tm-heading
-              className="text-center font-anton font-black text-5xl z-10 relative">
+              className="text-center font-anton font-black text-5xl z-10 relative overflow-clip">
               TAMAN TEMAN
             </h1>
             <div
